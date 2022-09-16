@@ -11,6 +11,7 @@ function writePassword() {
 }
 
 
+
 function generatePassword() {
   
   var lowerCaseChars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -22,9 +23,11 @@ function generatePassword() {
   console.log(pwLength);
   
   if (pwLength > 128 || pwLength < 8 || isNaN(pwLength)) {
-  window.alert("Pleasea enter a number that must be at least 8 characters and no more than 129 characters");
+  window.alert("Please enter a number that must be at least 8 characters and no more than 129 characters");
     return;
 }
+
+ 
 
 
  var lowerCase = window.confirm("Would you like to include lowercase characters in your password?");
@@ -35,10 +38,12 @@ function generatePassword() {
 
  var specialCase = window.confirm("Would you like to include special characters in your password?");
  
-
+  
   
   return "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 }
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+
