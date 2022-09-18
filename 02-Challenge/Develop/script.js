@@ -20,7 +20,7 @@ function randomIndex(list) {
 
 function userInputType(inputType, message, validCondition) {
   let userInput = window.prompt(message)
-  let validType
+  let isValidType
 
   let inputObject = {
     canceled: userInput === null
@@ -28,10 +28,10 @@ function userInputType(inputType, message, validCondition) {
 
   if (inputType === "number") {
     userInput = parseInt(userInput)
-    validType = !isNaN(userInput)
+    isValidType = !isNaN(userInput)
   }
 
-  inputObject.validType = isValidType
+  inputObject.isValidType = isValidType
   inputObject.value = userInput
   inputObject.validCondition = isValidType && validCondition(userInput)
 
